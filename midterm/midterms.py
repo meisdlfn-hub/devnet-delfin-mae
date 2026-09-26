@@ -13,7 +13,7 @@ def display_menu():
     print("4. Find a pet by name")
     print("5. Exit")
 
-    choice = input ("Choose an option: ")
+    choice = input ("Choose an option [1-5]: ")
     return choice
         # print the menu, return the user's choice
     pass
@@ -22,13 +22,16 @@ def add_pet(pet_list):
     petname = input ("Name: ")
     pettype = input ("Animal type: ")
     petstat = input ("Status: ")
-    return
-
+    petinformation = print (petname + "," + pettype + "," + petstat)
+    pet_list.append(petinformation)
     print ("Added!")
+    return pets
     # ask for name, animal type, status — build the string, add to the list
     pass
 
 def view_pets(pet_list):
+    for pets in pet_list:
+        print (pets)
     # loop through and print every pet — handle empty list
     pass
 
@@ -50,13 +53,13 @@ def main():
     while running:
         choice = display_menu()
         if choice == "1":
-            add_pet()
+            add_pet(pets)
         elif choice == "2":
-            view_pets()
+            view_pets(pets)
         elif choice == "3":
-            count_available_adopted()
+            count_available_adopted(pets)
         elif choice == "4":
-            find_pet()
+            find_pet(pets)
         elif choice == "5":
             running = False
         else:
