@@ -23,8 +23,9 @@ KEY VOCABULARY
 MY OWN EXAMPLE(S)
 ============================================
 
-
 """
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
+One mistake I want to avoid is forgetting to call the function after creating it. 
+I learned that defining a function only creates it, and I still need to call it for the code inside the function to run.
