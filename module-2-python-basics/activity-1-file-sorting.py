@@ -1,23 +1,24 @@
 """
 Module 2 — Activity: File Sorting with os and shutil
-Student: [your name]
-Date: [date]
+Student: Delfin, Cherrie Mae S.
+Date: 9/27/2026
 
 ============================================
 WHAT DID YOU BUILD? (explain in your own words)
 ============================================
-[Paste your working script below first, then come back and explain
-it here: what does your script do, and what rule did you use to
-sort the files? e.g. by extension, by name, by date, etc.]
+I made a Python program that asks the user to enter a folder path. 
+It checks if the folder exists and then gets the files inside it. 
+I also made categories for images, documents, videos, and other files. 
+The purpose is to organize the files based on their type.
 
 
 ============================================
 KEY VOCABULARY
 ============================================
-- os module:
-- shutil module:
-- file path:
-- directory:
+- os module: A Python module that lets me work with files, folders, and paths.
+- shutil module: A Python module that can be used to move, copy, and manage files and folders.
+- file path: The location of a file or folder in the computer.
+- directory: Another term for a folder where files can be stored.
 (add more as needed)
 
 
@@ -30,22 +31,68 @@ Paste the code you already wrote for this activity below.
 import os
 import shutil
 
-# --- paste your existing code here ---
+users = input("What is your folder path? ")
+
+if os.path.exists(users):
+    print("Proceed to Next Step")
+
+    files = os.listdir(users)
+
+    image = "Images"
+    documents = "Documents"
+    videos = "Videos"
+    others = "Others"
+
+    print(files)
+
+    for folder in [image, documents, videos, others]:
+        folder_path = os.path.join(users, folder)
+
+        if not os.path.exists(folder_path):
+            os.mkdir(folder_path)
+
+    for item in files:
+        file_path = os.path.join(users, item)
+
+        if os.path.isdir(file_path):
+            continue
+
+        extension = os.path.splitext(item)[1].lower()
+
+        if extension in [".jpg", ".jpeg", ".png", ".gif"]:
+            destination = image
+
+        elif extension in [".doc", ".docx", ".pdf", ".txt"]:
+            destination = documents
+
+        elif extension in [".mp4", ".avi", ".mkv", ".mov"]:
+            destination = videos
+
+        else:
+            destination = others
+
+        destination_path = os.path.join(users, destination, item)
+        shutil.move(file_path, destination_path)
+
+    print("Files sorted successfully.")
+
+else:
+    print("Error: Folder does not exist.")
 
 
 """
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what tripped you up while building this? e.g. a path that didn't
-exist, a file that got overwritten, something that didn't work the
-way you expected at first]
+One mistake I made was getting confused with my variables, especially when I used the same variable for different things. 
+I also had trouble understanding how to get the files from the folder and organize them into different categories.
 
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
-[optional: how is this similar to what real automation scripts do?
-think about your own gradebook/attendance workflow — could something
-like this save you time there?]
+This can be useful for organizing school files. 
+Instead of manually sorting many files into different folders, 
+a Python program can do it automatically based on their file type. 
+It can save time when there are a lot of files.
 """
