@@ -29,8 +29,10 @@ Write at least one working example below that you
 came up with yourself — not copied from class.
 """
 
-# --- your code example goes here ---
+fruits = ["Apple", "Banana", "Mango"]
 
+for fruit in fruits:
+    print("I like", fruit)
 
 """
 ============================================
@@ -39,9 +41,14 @@ A MISTAKE I MADE (or one I want to avoid)
 [what's something confusing or easy to get wrong
 about this topic?]
 
+One mistake I want to avoid is forgetting that list indexes start at 0 instead of 1. 
+I also learned that a while loop needs a condition that can eventually become False to prevent it from running continuously.
+
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
 [optional]
+Loops and lists can be useful when working with a group of information. 
+For example, they can be used to store and display a list of tasks that need to be completed.
 """
