@@ -6,18 +6,19 @@ Date: 9/27/2026
 ============================================
 WHAT DID YOU BUILD? (explain in your own words)
 ============================================
-[Paste your working script below first, then come back and explain
-it here: what does your script do, and what rule did you use to
-sort the files? e.g. by extension, by name, by date, etc.]
+I made a Python program that asks the user to enter a folder path. 
+It checks if the folder exists and then gets the files inside it. 
+I also made categories for images, documents, videos, and other files. 
+The purpose is to organize the files based on their type.
 
 
 ============================================
 KEY VOCABULARY
 ============================================
-- os module:
-- shutil module:
-- file path:
-- directory:
+- os module: A Python module that lets me work with files, folders, and paths.
+- shutil module: A Python module that can be used to move, copy, and manage files and folders.
+- file path: The location of a file or folder in the computer.
+- directory: Another term for a folder where files can be stored.
 (add more as needed)
 
 
@@ -30,16 +31,38 @@ Paste the code you already wrote for this activity below.
 import os
 import shutil
 
-# --- paste your existing code here ---
+users = input("What is your folder path? ")
+
+if os.path.exists(users):
+    print("Proceed to Next Step")
+
+    file = os.listdir(users)
+    image = 0
+    documents = 0 
+    videos = 0
+    others = 0
+
+    print(file)
+
+    for file in [image, documents, videos, others]:
+        if not os.path.exists(file):
+            os.mkdir(file)
+
+    for items in file:
+        users = os.path.exists(users)
+
+        print (file)
+    
+else:
+    print("Error")
 
 
 """
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what tripped you up while building this? e.g. a path that didn't
-exist, a file that got overwritten, something that didn't work the
-way you expected at first]
+One mistake I made was getting confused with my variables, especially when I used the same variable for different things. 
+I also had trouble understanding how to get the files from the folder and organize them into different categories.
 
 
 ============================================
