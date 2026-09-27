@@ -44,9 +44,15 @@ A MISTAKE I MADE (or one I want to avoid)
 [what's something confusing or easy to get wrong
 about this topic?]
 
+One mistake I want to avoid is forgetting the colon after an if, elif, or else statement. 
+I also learned that the code inside the condition needs to be properly indented so Python knows which statements belong to it.
+
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
 [optional]
+
+Control flow is useful when a program needs to make decisions. 
+For example, a bar can use conditions to check a customer's age and decide if they are allowed to enter.
 """
