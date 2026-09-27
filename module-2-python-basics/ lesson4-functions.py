@@ -22,6 +22,11 @@ KEY VOCABULARY
 ============================================
 MY OWN EXAMPLE(S)
 ============================================
+def greet(name):
+    return "Hello, " + name
+
+message = greet("Mae")
+print(message)
 
 """
 ============================================
