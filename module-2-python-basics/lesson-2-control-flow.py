@@ -1,22 +1,22 @@
 """
 Module 2 — Lesson 2: Control Flow (if / elif / else)
-Student: [your name]
-Date: [date]
+Student: Delfin, Cherrie Mae S.
+Date: 09/27/2026
 
 ============================================
 WHAT IS THIS TOPIC? (explain it like you're
 teaching a friend who's never coded before)
 ============================================
-[write your own explanation here]
-
+Control flow allows a program to decide what to do based on a condition. 
+The if, elif, and else statements are used to check different conditions and choose which part of the code should run.
 
 ============================================
 KEY VOCABULARY
 ============================================
-- condition:
-- if / elif / else:
-- comparison operator:
-- boolean expression:
+- condition: A statement that is checked to see if it is True or False.
+- if / elif / else: Statements used to choose what code will run based on a condition.
+- comparison operator: A symbol used to compare two values, such as ==, >, <, >=, or <=.
+- boolean expression: An expression that results in either True or False.
 (add more as needed)
 
 
@@ -27,7 +27,14 @@ Write at least one working example below that you
 came up with yourself — not copied from class.
 """
 
-# --- your code example goes here ---
+age = 20
+
+if age >= 18:
+print("You can register.")
+elif age >= 13:
+print("You need permission.")
+else:
+print("You are too young to register.")
 
 
 """
