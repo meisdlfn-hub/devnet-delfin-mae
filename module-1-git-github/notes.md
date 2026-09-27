@@ -1,13 +1,15 @@
 # Module 1 — Git & GitHub
 
-**Student:** [your name]
-**Date:** [date]
+**Student:** Delfin, Cherrie Mae S.
+**Date:** 09/27/2026
 
 ---
 
 ## What is Git? What is GitHub? (explain like you're teaching a friend who's never used either)
 
-[Write your own explanation here. What problem does Git actually solve? How is GitHub different from Git itself?]
+Git is a tool used to track changes made to files in a project. It allows me to save different versions of my work, which makes it easier to review changes and recover an earlier version when needed.
+
+GitHub is an online platform where Git repositories can be stored and managed. Git is mainly used to track and manage changes on my computer, while GitHub allows me to store, share, and collaborate on the project online.
 
 ---
 
