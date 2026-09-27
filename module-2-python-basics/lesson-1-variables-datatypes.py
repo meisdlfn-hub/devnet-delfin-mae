@@ -30,7 +30,7 @@ Write at least one working example below that you
 came up with yourself — not copied from class.
 """
 student_name = "Mae"
-age = "20"
+age = 20
 course = "BSIT"
 has_id = True
 
@@ -44,12 +44,13 @@ print("Has ID:", has_id)
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what's something confusing or easy to get wrong
-about this topic?]
+One mistake I want to avoid is forgetting that text should be written inside quotation marks and integers can be written without the quotation marks. 
+I also learned that using the correct data type is important because Python treats numbers, text, and boolean values differently.  
 
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
-[optional]
+Variables and data types are useful in almost every program because programs need to store information. 
+For example, a school system can use variables to store a student's name, age, grade, and enrollment status.
 """
