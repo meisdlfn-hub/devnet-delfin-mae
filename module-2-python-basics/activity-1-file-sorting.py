@@ -36,25 +36,48 @@ users = input("What is your folder path? ")
 if os.path.exists(users):
     print("Proceed to Next Step")
 
-    file = os.listdir(users)
-    image = 0
-    documents = 0 
-    videos = 0
-    others = 0
+    files = os.listdir(users)
 
-    print(file)
+    image = "Images"
+    documents = "Documents"
+    videos = "Videos"
+    others = "Others"
 
-    for file in [image, documents, videos, others]:
-        if not os.path.exists(file):
-            os.mkdir(file)
+    print(files)
 
-    for items in file:
-        users = os.path.exists(users)
+    for folder in [image, documents, videos, others]:
+        folder_path = os.path.join(users, folder)
 
-        print (file)
-    
+        if not os.path.exists(folder_path):
+            os.mkdir(folder_path)
+
+    for item in files:
+        file_path = os.path.join(users, item)
+
+        if os.path.isdir(file_path):
+            continue
+
+        extension = os.path.splitext(item)[1].lower()
+
+        if extension in [".jpg", ".jpeg", ".png", ".gif"]:
+            destination = image
+
+        elif extension in [".doc", ".docx", ".pdf", ".txt"]:
+            destination = documents
+
+        elif extension in [".mp4", ".avi", ".mkv", ".mov"]:
+            destination = videos
+
+        else:
+            destination = others
+
+        destination_path = os.path.join(users, destination, item)
+        shutil.move(file_path, destination_path)
+
+    print("Files sorted successfully.")
+
 else:
-    print("Error")
+    print("Error: Folder does not exist.")
 
 
 """
@@ -68,7 +91,8 @@ I also had trouble understanding how to get the files from the folder and organi
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
-[optional: how is this similar to what real automation scripts do?
-think about your own gradebook/attendance workflow — could something
-like this save you time there?]
+This can be useful for organizing school files. 
+Instead of manually sorting many files into different folders, 
+a Python program can do it automatically based on their file type. 
+It can save time when there are a lot of files.
 """
