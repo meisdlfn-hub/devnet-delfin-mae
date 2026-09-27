@@ -85,7 +85,8 @@ else:
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
 One mistake I made was getting confused with my variables, especially when I used the same variable for different things. 
-I also had trouble understanding how to get the files from the folder and organize them into different categories.
+I also had trouble understanding how to get the files from the folder and organize them into different categories. 
+From this, I learned that I should use clear variable names and understand what each variable is supposed to store before using it in the code.
 
 
 ============================================
