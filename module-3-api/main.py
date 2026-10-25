@@ -1,29 +1,14 @@
-import requests
-import json
 
-r = requests.get('https://pokeapi.co/api/v2/pokemon/ditto')
-data = response.json()
+import random
 
-pokemon_list = ["pikachu", "snorlax", "balbasaur", "eevee", "charmander"]
+pokemon_list = ["pikachu", "bulbasaur", "eevee", "charmander", "squirtle"]
+answer = random.choice(pokemon_list)
 
-name = ["pikachu"]
-height = ["3"]
-weight = ["24"]
+print("=== WHO'S THAT POKEMON? ===")
 
-print("Who is your pokemon?")
-choice = random.choice(pokemon_list)
-response = response.json()
+guess = input("Enter Pokemon name: ").lower().strip()
 
-
-r.status_code
-200
-r.headers['content-type']
-'application/json; charset=utf8'
-r.encoding
-'utf-8'
-r.text
-'{"authenticated": true, ...'
-r.json()
-{'authenticated': True, ...}
-
-
+if guess == answer:
+    print("Correct! It's", answer.title() + "!")
+else:
+    print("Wrong! The Pokemon was", answer.title())
