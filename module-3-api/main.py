@@ -12,8 +12,15 @@ response = requests.get(url)
 if response.status_code == 200:
     info = response.json()
 
+    name = info["name"]
+    height = info["height"]
+    weight = info["weight"]
+    ability = info["abilities"][0]["ability"]["name"]
+
+    print("\nGuess the Pokemon!")
     print("Height:", info["height"])
     print("Weight:", info["weight"])
+    print("Ability:", ability.replace("-", " ").title())
 
     guess = input("Enter Pokemon name: ").lower().strip()
 
